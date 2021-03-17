@@ -1,0 +1,1 @@
+openssl s_client -connect <serverFQDN>:443 < /dev/null 2>&1 | sed -n '/-----BEGIN/,/-----END/p' | openssl x509 -noout -dates
